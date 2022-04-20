@@ -38,14 +38,14 @@ final TextStyle kTextStyleOneFade = GoogleFonts.lato(
 );
 
 final TextStyle kTextStyleTwo = GoogleFonts.lato(
-  fontSize: 12.sp,
+  fontSize: 14.sp,
   color: const Color.fromARGB(255, 60, 58, 58),
 );
 final TextStyle kTextStyleTwoFade = GoogleFonts.lato(
-  fontSize: 12.sp,
-  color: Color.fromARGB(255, 160, 160, 160),
+  fontSize: 14.sp,
+  color: const Color.fromARGB(255, 160, 160, 160),
 );
 final TextStyle kTextstyleThree = GoogleFonts.lato(
-  fontSize: 20.sp,
+  fontSize: 12.sp,
   color: const Color.fromARGB(255, 60, 58, 58),
 );

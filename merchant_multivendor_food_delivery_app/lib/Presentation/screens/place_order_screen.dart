@@ -25,7 +25,7 @@ class PlaceOrder extends StatelessWidget {
             ),
             Text(
               'Order Id: #E514Fe',
-              style: kTitleStyle,
+              style: kHeadingStyleTwo,
             ),
             const Spacer(),
             IconButton(
@@ -51,12 +51,12 @@ class PlaceOrder extends StatelessWidget {
             children: [
               Text(
                 'Food Order',
-                style: kPrimaryHeadingStyle,
+                style: kHeadingStyleOne,
               ),
               const Spacer(),
               Text(
                 '\$252',
-                style: kPrimaryHeadingStyle,
+                style: kHeadingStyleOne,
               )
             ],
           ),
@@ -70,7 +70,7 @@ class PlaceOrder extends StatelessWidget {
             onPressed: () {},
             child: Text(
               'Use current location',
-              style: kTitleStyle.copyWith(color: Colors.white),
+              style: kHeadingStyleTwo.copyWith(color: Colors.white),
             ),
             style: ButtonStyle(
               foregroundColor:

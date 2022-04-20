@@ -17,20 +17,21 @@ class NewOrdersWIdget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('New Orders', style: kTitleStyle),
+        Text('New Orders', style: kHeadingStyleTwo),
         SizedBox(height: 15.h),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
               'Order Id: $oderId',
-              style: kSubTitleStyle,
+              style: kHeadingStyleThree,
             ),
             Text(
               // TODO: use the enum orderstatus.pending/delivered..etc
               'Order Pending',
 
-              style: kSubTitleStyle.copyWith(color: const Color(0xFFff9c11)),
+              style:
+                  kHeadingStyleThree.copyWith(color: const Color(0xFFff9c11)),
             )
           ],
         ),
@@ -39,10 +40,10 @@ class NewOrdersWIdget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('16 Feb 2022', // TODO: use current date here
-                style: kTextStyle),
+                style: kTextStyleOne),
             Text('Bkash Payment',
                 // TODO: Payment method
-                style: kTextStyle)
+                style: kTextStyleOne)
           ],
         ),
         Expanded(child: StepperWidget())

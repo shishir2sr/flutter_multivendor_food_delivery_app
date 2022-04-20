@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:merchant_multivendor_food_delivery_app/Presentation/constants.dart';
 
+import 'Presentation/widget/invoice/quantity_widget.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -28,120 +30,108 @@ class MyApp extends StatelessWidget {
               backgroundColor: const Color(0xFFf5f5f9),
               body: Column(
                 children: [
-                  Row(
-                    children: [
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.arrow_back_ios_outlined,
+                  Flexible(
+                    fit: FlexFit.loose,
+                    child: Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.arrow_back_ios_outlined,
+                          ),
                         ),
-                      ),
-                      SizedBox(width: 5.w),
-                      Text('Order #EF8KB6', style: kTitleStyle),
-                    ],
+                        SizedBox(width: 5.w),
+                        Text('Order #EF8KB6', style: kHeadingStyleThree),
+                      ],
+                    ),
                   ),
-                  QuantityWidget(),
+                  const QuantityWidget(),
+                  Padding(
+                    padding: EdgeInsets.all(12.0.w),
+                    child: Table(
+                      children: [
+                        TableRow(children: [
+                          SizedBox(
+                            height: 40.h,
+                            child: Text('Bill Details',
+                                textAlign: TextAlign.start,
+                                style: kHeadingStyleThree),
+                          ),
+                          const Text('', textAlign: TextAlign.end),
+                        ]),
+                        TableRow(children: [
+                          SizedBox(
+                            height: 22.h,
+                            child: Text('Item Total',
+                                textAlign: TextAlign.start,
+                                style: kTextStyleOneFade),
+                          ),
+                          Text('\$140.00',
+                              textAlign: TextAlign.end,
+                              style: kTextStyleOne.copyWith(
+                                  fontWeight: FontWeight.bold)),
+                        ]),
+                        TableRow(children: [
+                          SizedBox(
+                            height: 22.h,
+                            child: Text('Discount',
+                                textAlign: TextAlign.start,
+                                style: kTextStyleOneFade),
+                          ),
+                          Text('-\$0.00',
+                              textAlign: TextAlign.end,
+                              style: kTextStyleOne.copyWith(
+                                  fontWeight: FontWeight.bold)),
+                        ]),
+                        TableRow(children: [
+                          SizedBox(
+                            height: 22.h,
+                            child: Text('Tax',
+                                textAlign: TextAlign.start,
+                                style: kTextStyleOneFade),
+                          ),
+                          Text('\$0.00',
+                              textAlign: TextAlign.end,
+                              style: kTextStyleOne.copyWith(
+                                  fontWeight: FontWeight.bold)),
+                        ]),
+                        TableRow(children: [
+                          Text('Delivery Fee',
+                              textAlign: TextAlign.start,
+                              style: kTextStyleOneFade),
+                          Text('\$100.00',
+                              textAlign: TextAlign.end,
+                              style: kTextStyleOne.copyWith(
+                                  fontWeight: FontWeight.bold)),
+                        ]),
+                        TableRow(children: [
+                          Divider(
+                            thickness: 2.w,
+                            color: Colors.black12,
+                          ),
+                          Divider(
+                            thickness: 2.w,
+                            color: Colors.black12,
+                          )
+                        ]),
+                        TableRow(children: [
+                          Text('To Pay',
+                              textAlign: TextAlign.start,
+                              style: kHeadingStyleThree),
+                          Text('\$240.00',
+                              textAlign: TextAlign.end,
+                              style: kHeadingStyleThree.copyWith(
+                                  fontWeight: FontWeight.bold)),
+                        ]),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
           ),
         );
       },
-    );
-  }
-}
-
-class QuantityWidget extends StatelessWidget {
-  const QuantityWidget({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 550.h,
-      width: double.infinity.w,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Flexible(
-            child: ListTile(
-              tileColor: const Color(0xFFfef0e6),
-              leading: ClipRRect(
-                borderRadius: BorderRadius.circular(5),
-                child: Image.asset(
-                  // TODO: Get image from merchant profile
-                  'assets/images/merchantname.jpg',
-                  height: 60.h,
-                  width: 50.w,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              title: Text(
-                // TODO: get the name of the merchant
-                'Merchant Name',
-                style: kTitleStyle,
-              ),
-              subtitle: Text(
-                // TODO: Get the order status from order object
-                'Order Pending',
-                style: kSecondaryHeadingStyle.copyWith(
-                    color: const Color(0xFF52b479)),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Icon(
-                      Icons.radio_button_checked_outlined,
-                      size: 15.sp,
-                      color: const Color(0xFF008000),
-                    ),
-                    SizedBox(width: 10.w),
-                    Text(
-                      //TODO: get the itemname from order
-                      'Biriyani',
-                      style: kSubTitleStyle,
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 5.h,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      //TODO: get the quantity and price
-                      ' Qty : 2 × \$70.00',
-                      style: kTextStyleTwo,
-                    ),
-                    Text(
-                      //TODO: get the total price from invoice
-                      '\$140',
-                      style: kSubTitleStyle,
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 5.h,
-                ),
-                Text(
-                  // TODO: ingradients
-                  ' Rice, Meat, Masala',
-                  style: kTextStyleTwo,
-                ),
-                const Divider(color: Color(0xFFe9e9ea), thickness: 2)
-              ],
-            ),
-          ),
-        ],
-      ),
     );
   }
 }

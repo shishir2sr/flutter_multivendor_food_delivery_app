@@ -24,3 +24,5 @@ final TextStyle kSubTitleStyle = GoogleFonts.lato(
 );
 
 final TextStyle kTextStyle = GoogleFonts.lato(fontSize: 12.sp);
+final TextStyle kTextStyleTwo = GoogleFonts.lato(
+    fontSize: 12.sp, color: Color.fromARGB(255, 130, 121, 121));

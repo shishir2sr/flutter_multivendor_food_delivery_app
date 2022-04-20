@@ -28,21 +28,21 @@ class OrderHistoryWidget extends StatelessWidget {
               children: [
                 Text(
                   'Order ID: #UFE858',
-                  style: kTitleStyle,
+                  style: kHeadingStyleTwo,
                 ),
                 SizedBox(
                   height: 5.h,
                 ),
                 Text(
                   '17 April 2022, 6:30 p.m.',
-                  style: kTextStyle.copyWith(fontSize: 16.sp),
+                  style: kTextStyleOne.copyWith(fontSize: 16.sp),
                 ),
                 SizedBox(
                   height: 5.h,
                 ),
                 Text(
                   'Order Accepted',
-                  style: kTextStyle.copyWith(
+                  style: kTextStyleOne.copyWith(
                       color: const Color(0xFFffbc5f),
                       fontSize: 16.sp,
                       fontWeight: FontWeight.bold),
@@ -54,7 +54,7 @@ class OrderHistoryWidget extends StatelessWidget {
               children: [
                 Text(
                   '\$152', // TODO: price
-                  style: kTitleStyle,
+                  style: kHeadingStyleTwo,
                 ),
                 SizedBox(
                   height: 5.h,
@@ -65,7 +65,7 @@ class OrderHistoryWidget extends StatelessWidget {
                 ),
                 Text(
                   'Payment Method', // TODO: get from order
-                  style: kTextStyle.copyWith(fontSize: 16.sp),
+                  style: kTextStyleOne.copyWith(fontSize: 16.sp),
                 ),
               ],
             )

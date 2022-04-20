@@ -19,7 +19,7 @@ class DeliveryWelcomeScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Welcome Admin!', style: kTitleStyle),
+          Text('Welcome Admin!', style: kHeadingStyleTwo),
           // TODO: add name dynamically
           SizedBox(height: 10.h),
 

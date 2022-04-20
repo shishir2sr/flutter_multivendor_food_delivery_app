@@ -19,7 +19,7 @@ class OrderHistoryScreen extends StatelessWidget {
           Center(
             child: Text(
               'Order History',
-              style: kTitleStyle,
+              style: kHeadingStyleTwo,
             ),
           ),
           SizedBox(height: 10.h),

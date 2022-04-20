@@ -90,7 +90,6 @@ class QuantityWidget extends StatelessWidget {
             ],
           ),
         ),
-        const Divider(thickness: 4)
       ],
     );
   }

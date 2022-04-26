@@ -46,7 +46,7 @@ class NewOrdersWIdget extends StatelessWidget {
                 style: kTextStyleOne)
           ],
         ),
-        Expanded(child: StepperWidget())
+        const Expanded(child: StepperWidget())
       ],
     );
   }

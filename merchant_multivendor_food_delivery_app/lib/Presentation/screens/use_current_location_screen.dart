@@ -23,12 +23,12 @@ class UserCurrentLocationScreen extends StatelessWidget {
           ),
           Text(
             'Enable your location',
-            style: kHeadingStyleOne,
+            style: kHeadingStyleTwo,
           ),
           Text(
             'To search for the best nearby driver, we want to know your current location',
             textAlign: TextAlign.center,
-            style: kHeadingStyleThree,
+            style: kTextStyleOneFade,
           ),
           SizedBox(
             height: 40.h,
@@ -40,7 +40,7 @@ class UserCurrentLocationScreen extends StatelessWidget {
               onPressed: () {},
               child: Text(
                 'Use current location',
-                style: kHeadingStyleTwo.copyWith(color: Colors.white),
+                style: kHeadingStyleThree.copyWith(color: Colors.white),
               ),
               style: ButtonStyle(
                 foregroundColor:

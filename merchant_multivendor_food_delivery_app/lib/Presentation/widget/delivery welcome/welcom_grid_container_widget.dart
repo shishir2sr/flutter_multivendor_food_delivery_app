@@ -28,7 +28,7 @@ class DeliveryTrackingWidget extends StatelessWidget {
                   ? '\$${deliveryTrackingModel.order}'
                   : '${deliveryTrackingModel.order}',
               // TODO: calculate the total selling price and pass here
-              style: kHeadingStyleOne),
+              style: kHeadingStyleTwo),
           //? conditions to check if the value is iteger or double
           SizedBox(
             height: 10.h,
@@ -38,7 +38,7 @@ class DeliveryTrackingWidget extends StatelessWidget {
             child: Text(
               deliveryTrackingModel.titleText,
               // TODO: load dinamically from the app
-              style: kHeadingStyleOne,
+              style: kHeadingStyleFour,
             ),
           ),
         ],

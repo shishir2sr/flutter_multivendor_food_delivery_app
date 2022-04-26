@@ -38,7 +38,7 @@ class DeliveryTrackingWidget extends StatelessWidget {
             child: Text(
               deliveryTrackingModel.titleText,
               // TODO: load dinamically from the app
-              style: kHeadingStyleOne,
+              style: kHeadingStyleFour,
             ),
           ),
         ],

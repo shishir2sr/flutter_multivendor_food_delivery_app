@@ -24,6 +24,7 @@ class OrderHistoryScreen extends StatelessWidget {
           ),
           SizedBox(height: 10.h),
           const PastNewOrderRowWidget(),
+          SizedBox(height: 10.h),
           Expanded(
             child: ListView.builder(
               shrinkWrap: true,

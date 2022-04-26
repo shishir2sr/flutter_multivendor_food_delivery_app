@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:merchant_multivendor_food_delivery_app/Presentation/constants.dart';
 import 'package:merchant_multivendor_food_delivery_app/Presentation/screens/delivery_welcome_screen.dart';
+import 'package:merchant_multivendor_food_delivery_app/Presentation/screens/order_history_screen.dart';
 import 'package:merchant_multivendor_food_delivery_app/Presentation/widget/delivery welcome/stepper_widget.dart';
 
 import 'Presentation/screens/billing_screen.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
           home: SafeArea(
             child: Scaffold(
               // body: BillingScreen(),
-              body: DeliveryWelcomeScreen(),
+              body: OrderHistoryScreen(),
             ),
           ),
         );

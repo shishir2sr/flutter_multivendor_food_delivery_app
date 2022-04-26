@@ -28,7 +28,7 @@ class OrderHistoryWidget extends StatelessWidget {
               children: [
                 Text(
                   'Order ID: #UFE858',
-                  style: kHeadingStyleTwo,
+                  style: kHeadingStyleThree,
                 ),
                 SizedBox(
                   height: 5.h,
@@ -54,7 +54,8 @@ class OrderHistoryWidget extends StatelessWidget {
               children: [
                 Text(
                   '\$152', // TODO: price
-                  style: kHeadingStyleTwo,
+                  style:
+                      kHeadingStyleThree.copyWith(fontWeight: FontWeight.w900),
                 ),
                 SizedBox(
                   height: 5.h,

@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../constants.dart';
+import '../widget/delivery Welcome/stepper_widget.dart';
 import '../widget/deliveryWelcome/stepper_widget.dart';
 import '../widget/locationaccess/google_map_widget.dart';
 
-class PlaceOrder extends StatelessWidget {
-  const PlaceOrder({
+class AcceptOrderScreen extends StatelessWidget {
+  const AcceptOrderScreen({
     Key? key,
   }) : super(key: key);
 
@@ -25,7 +26,7 @@ class PlaceOrder extends StatelessWidget {
             ),
             Text(
               'Order Id: #E514Fe',
-              style: kHeadingStyleTwo,
+              style: kHeadingStyleThree,
             ),
             const Spacer(),
             IconButton(
@@ -51,12 +52,12 @@ class PlaceOrder extends StatelessWidget {
             children: [
               Text(
                 'Food Order',
-                style: kHeadingStyleOne,
+                style: kHeadingStyleTwo,
               ),
               const Spacer(),
               Text(
                 '\$252',
-                style: kHeadingStyleOne,
+                style: kHeadingStyleTwo,
               )
             ],
           ),
@@ -70,7 +71,7 @@ class PlaceOrder extends StatelessWidget {
             onPressed: () {},
             child: Text(
               'Use current location',
-              style: kHeadingStyleTwo.copyWith(color: Colors.white),
+              style: kHeadingStyleThree.copyWith(color: Colors.white),
             ),
             style: ButtonStyle(
               foregroundColor:

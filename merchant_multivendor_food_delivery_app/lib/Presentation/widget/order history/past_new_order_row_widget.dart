@@ -12,7 +12,7 @@ class PastNewOrderRowWidget extends StatelessWidget {
       children: [
         Expanded(
           child: SizedBox(
-            height: 40.h,
+            height: 50.h,
             child: ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
@@ -31,7 +31,7 @@ class PastNewOrderRowWidget extends StatelessWidget {
         ),
         Expanded(
           child: SizedBox(
-            height: 40.h,
+            height: 50.h,
             child: ElevatedButton(
               onPressed: null,
               style: ElevatedButton.styleFrom(
